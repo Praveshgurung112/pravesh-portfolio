@@ -36,7 +36,7 @@ export default function Projects({ projects }: ProjectsProps) {
             What I&apos;ve <span className="gradient-text">Built</span>
           </motion.h2>
 
-          <motion.p variants={fadeIn("up", 0.15)} className="text-center text-white/40 max-w-xl mx-auto mb-16 text-lg">
+          <motion.p variants={fadeIn("up", 0.15)} className="text-center text-white/40 w-full max-w-xl mx-auto mb-16 text-lg">
             A selection of projects across web development, databases, and tooling.
           </motion.p>
 
@@ -92,44 +92,46 @@ export default function Projects({ projects }: ProjectsProps) {
             ))}
           </div>
 
-          {/* Rest — smaller grid */}
+          {/* Rest — smaller grid with same gradient style */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {rest.map((project, idx) => (
               <motion.div
                 key={project.id}
                 variants={fadeIn("up", (featured.length + idx) * 0.07)}
-                whileHover={{ y: -5 }}
-                className="glass-card rounded-2xl p-5 border border-white/8 hover:border-white/15 transition-all duration-300 group flex flex-col"
+                whileHover={{ y: -6, scale: 1.01 }}
+                className={`rounded-2xl p-5 border bg-gradient-to-br transition-all duration-300 group flex flex-col ${
+                  gradients[(featured.length + idx) % gradients.length]
+                }`}
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-9 h-9 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-white/60 font-bold text-sm">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-white font-black text-sm">
                     {project.title.charAt(0)}
                   </div>
                   <div className="flex gap-2">
                     {project.githubUrl && (
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-                        className="text-white/25 hover:text-white transition-colors">
+                        className="text-white/30 hover:text-white transition-colors hover:scale-110">
                         <FiGithub size={16} />
                       </a>
                     )}
                     {project.liveUrl && (
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label="Live"
-                        className="text-white/25 hover:text-white transition-colors">
+                        className="text-white/30 hover:text-white transition-colors hover:scale-110">
                         <FiExternalLink size={16} />
                       </a>
                     )}
                   </div>
                 </div>
-                <h3 className="text-white font-bold text-base mb-2 group-hover:text-white/80 transition-colors">{project.title}</h3>
-                <p className="text-white/40 text-sm leading-relaxed flex-1 mb-4">{project.description}</p>
+                <h3 className="text-white font-bold text-base mb-2 group-hover:gradient-text transition-colors">{project.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed flex-1 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
                   {project.techStack.slice(0, 3).map((t) => (
-                    <span key={t} className="px-2 py-0.5 rounded text-xs font-semibold bg-white/5 border border-white/8 text-white/40">
+                    <span key={t} className="px-2 py-0.5 rounded text-xs font-semibold bg-white/8 border border-white/10 text-white/50">
                       {t}
                     </span>
                   ))}
                   {project.techStack.length > 3 && (
-                    <span className="px-2 py-0.5 rounded text-xs font-semibold bg-white/5 border border-white/8 text-white/30">
+                    <span className="px-2 py-0.5 rounded text-xs font-semibold bg-white/8 border border-white/10 text-white/40">
                       +{project.techStack.length - 3}
                     </span>
                   )}
