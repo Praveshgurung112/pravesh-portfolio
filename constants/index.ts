@@ -142,56 +142,66 @@ export const experience: Experience[] = [
 export const projects: Project[] = [
   {
     id: "1",
+    title: "Personal Portfolio",
+    description:
+      "Bold, space-themed personal portfolio built with Next.js 16, Framer Motion, and a custom Canvas 2D aurora background. Features scroll-triggered animations, split hero layout, glassmorphism navbar, and zero database dependency — all content is static TypeScript.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Canvas 2D"],
+    githubUrl: "https://github.com/Praveshgurung112/pravesh-portfolio",
+    featured: true,
+    order: 1,
+  },
+  {
+    id: "2",
     title: "Food Delivery App",
     description:
       "Full-stack food delivery platform with role-based authentication, restaurant listings, cart management, and order tracking. Built with React, TypeScript, Node.js, Express, and Prisma ORM with PostgreSQL.",
     techStack: ["React", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL"],
     githubUrl: "https://github.com/Praveshgurung112/food-delivery-app",
     featured: true,
-    order: 1,
+    order: 2,
   },
   {
-    id: "2",
+    id: "3",
     title: "Notes Point",
     description:
       "Role-based academic notes sharing platform for students and faculty. Features secure upload, search, categorization, and permission-based access control. Built with PHP, MySQL, and Apache on Ubuntu.",
     techStack: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Apache"],
     githubUrl: "https://github.com/Praveshgurung112/NotesPoint",
     featured: true,
-    order: 2,
+    order: 3,
   },
   {
-    id: "3",
+    id: "4",
     title: "College Notes Swap",
     description:
       "Web platform enabling students to swap and share college notes. Implements user authentication, file upload, and a categorized notes library with search functionality.",
     techStack: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/Praveshgurung112/clg-notes-swap",
     featured: true,
-    order: 3,
+    order: 4,
   },
   {
-    id: "4",
+    id: "5",
     title: "Music Store Analysis",
     description:
       "Analyzed customer and sales data from a music store using advanced SQL queries. Applied joins, subqueries, window functions, and aggregations to derive actionable business insights and reports.",
     techStack: ["SQL", "PostgreSQL", "Data Analysis"],
     githubUrl: "https://github.com/Praveshgurung112/-Music-Store-Analysis",
-    featured: true,
-    order: 4,
+    featured: false,
+    order: 5,
   },
   {
-    id: "5",
+    id: "6",
     title: "Art Store (PL/SQL)",
     description:
       "Database-driven art store management system built with PL/SQL. Implements stored procedures, triggers, and complex queries for inventory and sales management.",
     techStack: ["PL/SQL", "Oracle DB", "SQL"],
     githubUrl: "https://github.com/Praveshgurung112/Art-store",
     featured: false,
-    order: 5,
+    order: 6,
   },
   {
-    id: "6",
+    id: "7",
     title: "Live Term",
     description:
       "Interactive terminal/portfolio experience built with TypeScript. A creative browser-based terminal that showcases personal information through command-line interactions.",
@@ -199,10 +209,10 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Praveshgurung112/Live-term",
     liveUrl: "https://praveshgurung112.github.io/Live-term",
     featured: false,
-    order: 6,
+    order: 7,
   },
   {
-    id: "7",
+    id: "8",
     title: "Weather App",
     description:
       "Real-time weather application fetching live data from a weather API. Displays temperature, humidity, wind speed, and forecasts for any searched city.",
@@ -210,27 +220,27 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Praveshgurung112/weather",
     liveUrl: "https://praveshgurung112.github.io/weather",
     featured: false,
-    order: 7,
+    order: 8,
   },
   {
-    id: "8",
+    id: "9",
     title: "Dharamshala College Webpage",
     description:
       "Responsive college information website with sections for courses, faculty, admissions, and campus life. Clean UI with CSS animations and mobile-friendly layout.",
     techStack: ["HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/Praveshgurung112/Dharamshala-clg-webpage",
     featured: false,
-    order: 8,
+    order: 9,
   },
   {
-    id: "9",
+    id: "10",
     title: "Password Generator",
     description:
       "Secure password generator with customizable options for length, uppercase, lowercase, numbers, and special characters. Includes copy-to-clipboard functionality.",
     techStack: ["HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/Praveshgurung112/Password-generator-system",
     featured: false,
-    order: 9,
+    order: 10,
   },
 ];
 
