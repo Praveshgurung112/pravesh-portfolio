@@ -114,5 +114,3 @@ Site metadata (name, email, LinkedIn, GitHub, etc.) lives in `config/index.ts`.
 | Language | TypeScript |
 
 ---
-
-Built by **Pravesh Gurung** — [GitHub](https://github.com/Praveshgurung112) · [LinkedIn](https://www.linkedin.com/in/pravesh-gurung-407a38244/)
